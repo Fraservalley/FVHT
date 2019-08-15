@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Fraser Valley Hot Tubs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Fraser Valley's Best Source for hot tubs, swimspas, and covana covers">
+	<meta name="keywords" content="Fraser Valley Hot Tubs,Masterspa,Covana,H2X,mission,abbotsford,fraser valley,hot tub,Micheal Phelps,tub,swimspa,fvht">
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('scroll', () => {
+		   let parent = document.getElementById('parallax-container');
+		   let children = parent.getElementsByTagName('div');
+		   for(let i = 0; i < children.length; i++) {
+		     children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / (children.length+2)) + 'px)';
+		   }
+		}, false)
+
+		$(window).on('resize', function() {
+			setTimeout(function(){resizeFBPlugin()}, 500);
+		});
+
+		$(window).on('load', function() {
+		   setTimeout(function(){resizeFBPlugin()}, 1500);
+		});
+
+		function resizeFBPlugin(){
+		    //getting parent box width
+		    var container_width = ($('.fb-col').width() - parseInt($('.fb-col').css('padding-left'))).toFixed(0);
+
+		    if (!isNaN(container_width)) {
+		        $(".fb-page").attr("data-width", container_width);
+		    }
+		    if (typeof FB !== 'undefined' ) {
+		        FB.XFBML.parse();
+		    }
+		}
+	</script>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+		<div class="container-fluid">
+			<a href="https://www.fraservalleyhottubs.com" class="navbar-brand"><img src="img/logoIcon.png" alt="">Fraser Valley Hot Tubs</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse text-right" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="shop.html" class="nav-link">Models</a></li>
+					<li class="nav-item"><a href="#FAQ" class="nav-link">Troubleshooting</a></li>
+					<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Facebook Root Elements -->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
+
+	<!-- Page Bg Video -->
+	<video id="pageVideo" autoplay loop muted style="">
+			<source src="video/homepage-loop.mp4" type="video/mp4">
+			<source src="video/homepage-loop.webm" type="video/webm">
+			<source src="video/homepage-loop.ogv" type="video/ogg">
+	</video>
+
+	<!-- Hottub parallax effect -->
+	<div id="parallax-container">
+		<div id="parallaxTitle">
+			<p class="display-1 text-center">Home of <b style="text-shadow: 2px 2px 6px #333333;">QUALITY</b></p>
+			<p class="text-center font-weight-bold">Masterspas Hot tubs & Spas, Covana Covers, and more!</p>
+		</div>
+		<div>
+			<img src="img/tub1l.png"/>
+			<img src="img/tub1r.png"/>
+		</div>
+		<div style="z-index: -5; top: 300px;">
+			<img src="img/tub2l.png"/>
+			<img src="img/tub2r.png"/>
+		</div>
+	</div>
+
+	<!-- Page Content -->
+	<div id="content" class="container-fluid">
+
+		<div class="row">
+			<div class="col-sm-12 col-xl-6 offset-xl-1">
+				<div class="col-10 card p-4 mt-4">
+					<p class="lead text-center font-weight-bold">"Fraser Valley Hot Tubs is the <b>BEST</b> source for Swimspas and Hot Tubs in the Fraser Valley!"</p>
+				</div>
+				<div class="col-10 m-5">
+					<p class="display-4 text-center"><em>FVHT</em> is <em>your</em> <b>authorized</b> Masterspa & Covana dealer with models, parts, and accessories for nearly <b>ANY</b> budget!</p><br>
+					<button type="button" class="btn-primary align-self-center">Shop Models Now!</button>
+				</div>
+			</div>
+			<div class="fb-col align-items-center col-sm-12 col-xl-4">
+				<div class="fb-page" data-href="https://www.facebook.com/FraserValleyHotTubs" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+					<blockquote cite="https://www.facebook.com/FraserValleyHotTubs" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/FraserValleyHotTubs">Fraser Valley Hot Tubs</a></blockquote>
+				</div>
+			</div>
+		</div>
+
+		<div id="FAQ" class="row welcome text-center">
+			<div class="col-12 pt-3">
+				<h1 class="display-4">Troubleshooting/FAQ</h1>
+				<h3>Got questions? Don't worry we have at least a few answers.</h3>
+				<hr class="w-50">
+			</div>
+		</div>
+
+		<div class="container-fluid padding">
+			<div class="row">
+				<div class="d-flex justify-content-xl-right flex-column col-sm-12 col-xl-6">
+					<button class="btn btn-primary m-3" type="button" data-toggle="collapse" data-target="#generalFAQ" aria-expanded="false">General FAQ</button>
+					<div class="collapse" id="generalFAQ">
+						<h4>Why should I consider a hot tub?</h4>
+						<p>Warm water therapy has proven to be beneficial in healing, relieving and preventing injuries. For many people, it also helps to ease the stresses of everyday life, joints, and muscles as well as provide a great environment to connect with family and friends.</p>
+
+						<h4>Is it difficult to install a hot tub? Where’s the best place to put it?</h4>
+						<p>The answers to these are dependent on each individuals situation, but the bottom line is that a hot tub is actually relatively easy to install. Sufficient clearance is needed to transport the tub to your pad. Afterwards a qualified electrician will need to wire up the tub, and then only a garden hose is needed to fill it up!</p>
+
+						<h4>Is taking care of a hot tub difficult?</h4>
+						<p>Unlike most brands of hot tubs, taking care of a Master Spa is very easy. Every Master Spa features a patented, time-saving Eco Pur Water Purification System, which drastically reduces the time and amount of maintenance needed on your hot tub.</p>
+
+						<h4>Are Master Spas hot tubs energy efficient?</h4>
+						<p>Yes. Master Spa's are built to exceed the energy standards set by the California Energy Commission (CEC). Master Spas uses Icynene foam, which will not lose its insulating value for the life of your spa, while other brands using less expensive urethane based foams may lose up to 50% of their R-value (the measure of an insulation's ability to resist heat traveling through it) in as little as two years. Icynene is also environmentally friendly, as it does not emit gas. The Icynene insulation is sprayed onto the shell and plumbing of every spa and expands to fill every area ensuring you have the most energy efficient hot tub on the market. Cover locks are also provided to further increase your energy savings.</p>
+
+						<h4>Does my hot tub/home need to have any special plumbing installed?</h4>
+						<p>No. You will never need any special plumbing run to or from a Master Spa. All you need to do is put a garden hose over the edge to fill it up. A small pump is recommended for draining, but not necessary.</p>
+
+						<h4>What type of power does a hot tub require?</h4>
+						<p>Most hot tubs require a dedicated 220V/50a system. Each tub's owner manual can help you to determine exactly what you’ll need in addition to a qualified electrician. Some smaller hot tubs may be hooked up to a dedicated 110V/15a outlet. Hot tubs hooked up to 110V will generally have fewer therapy jets and smaller powered pumps and heaters.</p>
+
+						<h4>How safe is a portable spa?</h4>
+						<p>Safety is absolutely the top priority at Master Spas. That's why every Master Spa is Electric Testing Labs (ETL) marked and built to stringent Underwriters Laboratoris (UL) safety standards. Inertek, who provides the ETL mark, is the worldwide leader in safety testing. Each Master Spas model has been submitted to Inertek for testing and approval. Additionally, Inertek performs quarterly surprise inspections at the Master Spas facility. This gives you peace of mind. As with any other product that involves water, you should follow all electrical precautions outlined in our owner's manual and your local electric code. Even though our portable spas come with locking covers, you should never allow children to play around the spa without adult supervision.</p>
+
+						<h4>Can I come see a tub in person?</h4>
+						<p>Come on down to the shop to see the various models that we have in stock.</p>
+
+						<h4>How do I find the perfect hot tub for me?</h4>
+						<p>Finding the perfect hot tub isn't as difficult as you may think. A few things to think about: How many people will be using it? How much space do you have for the tub?</p>
+
+						<h4>I want to start enjoying my hot tub. How can I quickly set it up?</h4>
+						<p>Congratulations on your tub! Master Spas offer a Quick Start Water Care Guide that you can download here.</p>
+
+						<h4>I’m actually more interested in exercising or swimming. Do you sell swim spas?</h4>
+						<p>Yes. Master Spas is actually the world’s largest swim spa manufacturer. For the ultimate swimming experience, see our premium performance line, Michael Phelps Signature Swim Spas by Master Spas. Or, if you are most interested in exercising, see our H2X Fitness Swim Spas.</p>
+					</div>
+				</div>
+				<div class="d-flex justify-content-xl-left flex-column col-sm-12 col-xl-6">
+					<button class="btn btn-primary m-3" type="button" data-toggle="collapse" data-target="#technicalFAQ" aria-expanded="false">Technical FAQ</button>
+					<div class="collapse" id="technicalFAQ">
+						<h4>The water in my hot tub is cloudy</h4>
+						<p>Cloudy water can be caused by multiple things. The following list includes causes followed by its solution.</p>
+						<ol class="problist">
+								<li class="prob">Excessive organic contamination, or lack of sanitizer.
+										<ul>
+												<li class="sol">Shock treat with non-chlorine shock and adjust sanitizer level.</li>
+										</ul>
+								</li>
+								<li class="prob">Dissolved chemical solids.
+										<ul>
+												<li class="sol">Use clarifier to help remove small particles</li>
+										</ul>
+								</li>
+								<li class="prob">pH balance or total alkalinity is incorrect.
+										<ul>
+												<li class="sol">Test total alkalinity and pH. </li>
+												<li class="sol">Correct with pH increaser or pH decreaser.</li>
+										</ul>
+								</li>
+								<li class="prob">Calcium too high (hard water).
+										<ul>
+												<li class="sol">Use a sequestering agent weekly.</li>
+												<li class="sol">Replace some water with softer water.</li>
+										</ul>
+								</li>
+								<li class="prob">The filter is dirty.
+										<ul>
+												<li class="sol">Clean filter with filter cartridge cleaner.</li>
+										</ul>
+								</li>
+						</ol>
+
+						<h4>Chalky, white scale(mineral) deposits in water</h4>
+						<p class="sol">Use a sequestering agent. Check water balance and adjust as necessary.</p>
+
+						<h4>Clear, green water in my hot tub</h4>
+	          <p class="prob">Cause: High iron or copper content.</p>
+	          <p class="sol">Solution: Use a sequestering agent.</p>
+
+						<h4>Cloudy, green water in my hot tub</h4>
+	          <p>The following lists possible causes.</p>
+	          <ol class="problist">
+	              <li class="prob">Alkalinity levels are low.
+	                  <ul>
+	                      <li class="sol">Use a pH increaser.</li>
+	                  </ul>
+	              </li>
+	              <li class="prob">Sanitizer levels are low.
+	                  <ul>
+	                      <li class="sol">Test the sanitizer level.</li>
+	                      <li class="sol">If needed, show with non-chlorine shock.</li>
+	                  </ul>
+	              </li>
+	          </ol>
+
+						<h4>Brown water in my hot tub</h4>
+						<p class="prob">Cause: High iron or manganese level.</p>
+						<p class="sol">Solution: Use a sequestering agent.</p>
+
+						<h4>Chlorine odor</h4>
+						<p class="prob">Cause: Chloramines (the combined chlorine level) is high.</p>
+						<p class="sol">Solution: Shock with non-chlorine shock.</p>
+
+						<h4>Eye/skin irritation</h4>
+						<p class="prob">Cause: Organic contaminants, chloramines or pH is out of balance.</p>
+						<p class="sol">Solution: First, shock with non-chlorine shock. Then test it again, and adjust pH level as necessary.</p>
+
+						<h4>Foaming</h4>
+						<p class="prob">Cause: High concentration of chemicals due to evaporation and build-up of body oils, cosmetics and other contaminants</p>
+						<p class="sol">Solution: Use foam reducer. Shock treat with non-chlorine shock. Use enzyme reducer weekly as part of regular maintenance</p>
+
+						<h4>Pitting of metal fixtures</h4>
+						<p>The following list includes causes followed by its solution.</p>
+						<ol class="problist">
+							<li class="prob">pH or total alkalinity levels are too low.
+								<ul>
+									<li class="sol">Test and adjust pH and total alkalinity by adding pH Up.</li>
+								</ul>
+							</li>
+							<li class="prob">Improper sanitizer levels.
+								<ul>
+									<li class="sol">Regularly test and maintain proper sanitizer.</li>
+								</ul>
+							</li>
+							<li class="prob">Not rinsing or cleaning metal fixtures regularly.
+								<ul>
+									<li class="sol">Rinse metal fixtures with non-chlorinated water and wipe with soft cloth. See additional stainless steel care instructions in the Regular Maintenance Procedure section of your owner’s manual.</li>
+								</ul>
+							</li>
+						</ol>
+
+						<h4>Nothing on the spa operates</h4>
+						<ol>
+								<li>Check the control panel display for any messages. If there is a message, refer to the diagnostic section on that model hot tub. There you will find the meaning of the message and what action is to be taken. </li>
+								<li>If there is no message on your control panel, check and reset the GFCI* and house breaker. (*The GFCI should be located in a weatherproof box close to the spa, but no closer than 5 ft.)</li>
+								<li>If the spa does not respond, contact your dealer for service.</li>
+						</ol>
+
+						<h4>Pumps do not operate</h4>
+						<ol>
+								<li>Press the "Jets" button on your control panel.</li>
+								<li>If you hear the pumps trying to operate:
+										<ul>
+												<li>Check that all the slice valves are open.</li>
+												<li>The pump(s) may need to be primed.</li>
+												<li>Check that the air controls are open.</li>
+										</ul>
+								</li>
+								<li>If you do not hear anything from the pump, contact your dealer for service.</li>
+						</ol>
+
+						<h4>Poor jet performance</h4>
+						<ol>
+								<li>Make sure pump is operating.</li>
+								<li>Check that the water level is adequate (up to minimum safe water level).</li>
+								<li>Make sure the jets are open and the air controls are open.</li>
+								<li>Check for dirty filters. Clean if necessary.</li>
+						</ol>
+
+						<h4>Hot Tub not heating</h4>
+						<p>*If the hot tub heater has failed, the majority of the time it will trip the GFCI breaker. If the hot tub is not heating and has not tripped the breaker, please follow these steps:</p>
+						<ol>
+								<li>Check the control panel display for any messages. If there is a message, refer to the diagnostic section in the Spa Controls section of your owner's manual. There you will find the meaning of the message and what action is to be taken.</li>
+								<li>Check water set temperature at control panel.</li>
+								<li>Check for dirty filters. Clean if necessary.</li>
+								<li>Check "heat mode" the hot tub is set in. Hot tub should be in ready/standard mode.</li>
+								<li>Check the control panel for heater light indicator and/or thermometer icon. If the light is on or the indicator icon is moving, the hot tub should be heating. Wait a reasonable amount of time (approximately 1 hour) to see if the water temperature is changing. During this time, make sure the insulating cover to your spa is on and secured.</li>
+								<li>Reset power to the spa at GFCI breaker.</li>
+								<li>If hot tub is still not heating, contact your dealer for service.</li>
+						</ol>
+
+						<h4>GFCI is tripping</h4>
+						<p>The tripping of the GFCI may be caused by a component on the spa or by an electrical problem. Such electrical problems include, but are not limited to, a faulty GFCI breaker, power fluctuations or a simple miswire. It may be necessary to consult an electrician if your local dealer recommends doing so.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="container-fluid p-3">
+			<div class="row text-center">
+				<div class="col-md-12 social">
+					<a href="https://www.facebook.com/fraservalleyhottubs/"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.instagram.com/fraservalleyhottubs/"><i class="fab fa-instagram"></i></a>
+				</div>
+				<div class="col-md-12">
+					<h5>Fraser Valley Hot Tubs &copy2019</h5>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>

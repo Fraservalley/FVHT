@@ -1,0 +1,66 @@
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+#pageVideo{
+  z-index: -100;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
+/* Todo Fix Parallax Container for mobile */
+#parallax-container {
+  display: block;
+  height: 750px;
+}
+#parallax-container div {
+  z-index: -10;
+  position: fixed;
+  top: 400px;
+  background-position: center;
+  transform: translateY(0px);
+  width: 100%;
+  padding: 3rem;
+}
+#parallaxTitle{
+  z-index: 5 !important;
+  top: 25% !important;
+  background-color: #FFFFFFAA
+}
+
+#content {
+  z-index: 100;
+  background-color: #dadada;
+  position:relative;
+}
+
+footer {
+	background-color:#3f3f3f;
+	color:#d5d5d5;
+}
+
+.social a{
+	font-size:3em;
+	padding: .6rem;
+}
+.fa-facebook{
+	color:#3b5998;
+}
+.fa-instagram{
+	color:#517fa8;
+}
+.services{
+	margin: 0 auto;
+	width: 70%;
+}
+
+.fb-page,
+.fb-page span,
+.fb-page span iframe[style] {
+    width: 100% !important;
+}
