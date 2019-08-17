@@ -3,7 +3,7 @@
 <head>
 	<title>Fraser Valley Hot Tubs</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Fraser Valley's Best Source for hot tubs, swimspas, and covana covers">
 	<meta name="keywords" content="Fraser Valley Hot Tubs,Masterspa,Covana,H2X,mission,abbotsford,fraser valley,hot tub,Micheal Phelps,tub,swimspa,fvht">
 	<link rel="shortcut icon" href="img/favicon.ico" />
@@ -18,7 +18,7 @@
 		   let parent = document.getElementById('parallax-container');
 		   let children = parent.getElementsByTagName('div');
 		   for(let i = 0; i < children.length; i++) {
-		     children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / (children.length+2)) + 'px)';
+		     children[i].style.transform = 'translateY(-' + (window.pageYOffset * (i+1) / (children.length+2)) + 'px)';
 		   }
 		}, false)
 
@@ -44,9 +44,9 @@
 	</script>
 </head>
 
-<body>
+<body class="pt-4">
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 		<div class="container-fluid">
 			<a href="https://www.fraservalleyhottubs.com" class="navbar-brand"><img src="img/logoIcon.png" alt="">Fraser Valley Hot Tubs</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -55,7 +55,7 @@
 			<div class="collapse navbar-collapse text-right" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="shop.html" class="nav-link">Models</a></li>
+					<li class="nav-item"><a href="#models" class="nav-link">Models</a></li>
 					<li class="nav-item"><a href="#FAQ" class="nav-link">Troubleshooting</a></li>
 					<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
 				</ul>
@@ -75,18 +75,18 @@
 	</video>
 
 	<!-- Hottub parallax effect -->
+	<div id="parallaxTitle" class="w-100">
+		<p class="display-1 text-center">Home of <b style="text-shadow: 2px 2px 6px #333333;">QUALITY</b></p>
+		<p class="text-center font-weight-bold">Masterspas Hot tubs & Spas, Covana Covers, and more!</p>
+	</div>
 	<div id="parallax-container">
-		<div id="parallaxTitle">
-			<p class="display-1 text-center">Home of <b style="text-shadow: 2px 2px 6px #333333;">QUALITY</b></p>
-			<p class="text-center font-weight-bold">Masterspas Hot tubs & Spas, Covana Covers, and more!</p>
+		<div class="d-none d-lg-block">
+			<img src="img/tub.png"/>
+			<img src="img/tub.png" class="float-right"/>
 		</div>
-		<div>
-			<img src="img/tub1l.png"/>
-			<img src="img/tub1r.png"/>
-		</div>
-		<div style="z-index: -5; top: 300px;">
-			<img src="img/tub2l.png"/>
-			<img src="img/tub2r.png"/>
+		<div class="d-none d-lg-block">
+			<img src="img/tub.png"/>
+			<img src="img/tub.png" class="float-right"/>
 		</div>
 	</div>
 
@@ -99,11 +99,12 @@
 					<p class="lead text-center font-weight-bold">"Fraser Valley Hot Tubs is the <b>BEST</b> source for Swimspas and Hot Tubs in the Fraser Valley!"</p>
 				</div>
 				<div class="col-10 m-5">
-					<p class="display-4 text-center"><em>FVHT</em> is <em>your</em> <b>authorized</b> Masterspa & Covana dealer with models, parts, and accessories for nearly <b>ANY</b> budget!</p><br>
-					<button type="button" class="btn-primary align-self-center">Shop Models Now!</button>
+					<p class="display-4 text-justify-center"><em>FVHT</em> is <em>your</em> <b>authorized</b> Masterspa & Covana dealer with models, parts, and accessories for nearly <b>ANY</b> budget!</p><br>
+					<br>
+					<a class="btn-primary p-3" href="#models">Shop Models Now!</a>
 				</div>
 			</div>
-			<div class="fb-col align-items-center col-sm-12 col-xl-4">
+			<div class="fb-col d-flex justify-content-center col-sm-12 col-xl-4">
 				<div class="fb-page" data-href="https://www.facebook.com/FraserValleyHotTubs" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
 					<blockquote cite="https://www.facebook.com/FraserValleyHotTubs" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/FraserValleyHotTubs">Fraser Valley Hot Tubs</a></blockquote>
 				</div>
@@ -151,10 +152,11 @@
 						<p>Finding the perfect hot tub isn't as difficult as you may think. A few things to think about: How many people will be using it? How much space do you have for the tub?</p>
 
 						<h4>I want to start enjoying my hot tub. How can I quickly set it up?</h4>
-						<p>Congratulations on your tub! Master Spas offer a Quick Start Water Care Guide that you can download here.</p>
+						<p>Congratulations on your tub! Master Spas offer a Quick Start Water Care Guide that you can download <a href="https://www.masterspas.com/documents/water-care-guide.pdf">here.</a></p>
 
 						<h4>I’m actually more interested in exercising or swimming. Do you sell swim spas?</h4>
 						<p>Yes. Master Spas is actually the world’s largest swim spa manufacturer. For the ultimate swimming experience, see our premium performance line, Michael Phelps Signature Swim Spas by Master Spas. Or, if you are most interested in exercising, see our H2X Fitness Swim Spas.</p>
+						<hr class="w-90 pt-2">
 					</div>
 				</div>
 				<div class="d-flex justify-content-xl-left flex-column col-sm-12 col-xl-6">
@@ -293,11 +295,27 @@
 
 						<h4>GFCI is tripping</h4>
 						<p>The tripping of the GFCI may be caused by a component on the spa or by an electrical problem. Such electrical problems include, but are not limited to, a faulty GFCI breaker, power fluctuations or a simple miswire. It may be necessary to consult an electrician if your local dealer recommends doing so.</p>
+						<hr class="w-90 pt-2">
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<div id="about" class="container-fluid pt-4">
+			<div class="row">
+				<div class="col-sm-12 col-md-7">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2610.698415497852!2d-122.3159413!3d49.1303626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54843408165e8475%3A0x5d31d8aaac1348fc!2sFraser+Valley+Hot+Tubs!5e0!3m2!1sen!2sca!4v1565909960881!5m2!1sen!2sca" width="100%" style="min-height:30rem;" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div id="info" class="d-flex flex-column col-md-5 pt-5 justify-content-center">
+					<div class="text-center">
+						<h4>(604)-618-4198</h4>
+						<h4>sean@fraservalleyhottubs.com</h4>
+						<hr class="w-75">
+						<a href="#models" class="btn btn-primary btn-lg" style="margin:1.5rem auto;">View Models Online Now!</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<footer>
@@ -309,6 +327,7 @@
 				</div>
 				<div class="col-md-12">
 					<h5>Fraser Valley Hot Tubs &copy2019</h5>
+					<p class="lead">sean@fraservalleyhottubs.com</p>
 				</div>
 			</div>
 		</div>
