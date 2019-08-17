@@ -15,7 +15,7 @@ html, body{
 
 /* Todo Fix Parallax Container for mobile */
 #parallax-container {
-  height: 100vh;;
+  height: 100vh;
 }
 #parallax-container div {
   position: fixed;
@@ -24,8 +24,10 @@ html, body{
   top: 50%;
 	transform: translateY(0px);
 }
+#parallax-container div:first-child {
+	top: 40%;
+}
 #parallax-container div img:last-child {
-	margin: 0 auto;
 	transform: scaleX(-1);
 }
 
