@@ -19,9 +19,14 @@ html, body{
 }
 #parallax-container div {
   position: fixed;
+	width: 100%;
 	z-index: -10;
   top: 50%;
 	transform: translateY(0px);
+}
+#parallax-container div img:last-child {
+	margin: 0 auto;
+	transform: scaleX(-1);
 }
 
 #parallaxTitle{
