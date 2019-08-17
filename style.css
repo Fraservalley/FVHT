@@ -15,21 +15,19 @@ html, body{
 
 /* Todo Fix Parallax Container for mobile */
 #parallax-container {
-  display: block;
-  height: 750px;
+  height: 100vh;;
 }
 #parallax-container div {
-  z-index: -10;
   position: fixed;
-  top: 400px;
-  background-position: center;
-  transform: translateY(0px);
-  width: 100%;
-  padding: 3rem;
+	z-index: -10;
+  top: 50%;
+	transform: translateY(0px);
 }
+
 #parallaxTitle{
-  z-index: 5 !important;
+	position: fixed;
   top: 25% !important;
+	z-index: -5 !important;
   background-color: #FFFFFFAA
 }
 
