@@ -1,6 +1,12 @@
-html, body{
+html{
 	height: 100%;
 	width: 100%;
+	/*overflow: auto;
+  -webkit-overflow-scrolling: touch;*/
+}
+body{
+	min-height: 100%;
+	overflow-x:hidden;
 }
 
 #pageVideo{
@@ -31,11 +37,14 @@ html, body{
 	transform: scaleX(-1);
 }
 
-#parallaxTitle{
+#parallaxTitle {
 	position: fixed;
   top: 25% !important;
 	z-index: -5 !important;
   background-color: #FFFFFFAA
+}
+#parallaxTitle b {
+	text-shadow: 2px 2px 6px #333333;
 }
 
 #content {
@@ -64,8 +73,81 @@ footer {
 	width: 70%;
 }
 
+/* Fix FB Garbage */
+.fb-page{
+	display: flex!important;
+	align-items: center;
+	justify-content: center;
+}
 .fb-page,
 .fb-page span,
 .fb-page span iframe[style] {
-    width: 100% !important;
+    height: 700px !important;
 }
+
+/* XS Query */
+@media (max-width: 375px) {
+	#tagLine {
+		font-size: 2.3rem;
+	}
+	#info > div {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 575px) {
+	#tagLine {
+		font-size: 3rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 0.8rem;
+	}
+	#FAQ h1 {
+		font-size: 2rem;
+	}
+	#FAQ h3 {
+		font-size: 1.1rem;
+	}
+	#info > div {
+		font-size: 1.7rem;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	#tagLine {
+		font-size: 4rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 1.1rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	#tagLine {
+		font-size: 5.3rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 1.4rem;
+	}
+	#info h4 {
+		font-size: 1.2rem;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	#tagLine {
+		font-size: 6.1rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 1.7rem;
+	}
+	#info h4 {
+		font-size: 1.4rem;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

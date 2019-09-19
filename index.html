@@ -22,8 +22,9 @@
 		   }
 		}, false)
 
+
 		$(window).on('resize', function() {
-			setTimeout(function(){resizeFBPlugin()}, 500);
+			setTimeout(function(){resizeFBPlugin()}, 1000);
 		});
 
 		$(window).on('load', function() {
@@ -34,19 +35,22 @@
 		    //getting parent box width
 		    var container_width = ($('.fb-col').width() - parseInt($('.fb-col').css('padding-left'))).toFixed(0);
 
-		    if (!isNaN(container_width)) {
+		    if (!isNaN(container_width) && container_width <= 500) {
 		        $(".fb-page").attr("data-width", container_width);
 		    }
-		    if (typeof FB !== 'undefined' ) {
+				else {
+					$(".fb-page").attr("data-width", 500);
+				}
+		    if (typeof FB !== 'undefined' && container_width <= 500) {
 		        FB.XFBML.parse();
 		    }
 		}
 	</script>
 </head>
 
-<body class="pt-4">
+<body>
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container-fluid">
 			<a href="https://www.fraservalleyhottubs.com" class="navbar-brand"><img src="img/logoIcon.png" alt="">Fraser Valley Hot Tubs</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -54,13 +58,12 @@
 			</button>
 			<div class="collapse navbar-collapse text-right" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="mailto:sean@fraservalleyhottubs.com" class="nav-link">Email</a></li>
+					<li class="d-none d-lg-block nav-item active"><a href="mailto:sean@fraservalleyhottubs.com" class="nav-link">Email</a></li>
 					<li class="nav-item"><a href="https://www.masterspas.com/hot-tubs#all" class="nav-link">Hot Tubs</a></li>
 					<li class="nav-item"><a href="https://www.h2xswimspa.com/swim-spas/challenger-series/" class="nav-link">Challenger Swimspas</a></li>
 					<li class="nav-item"><a href="https://www.h2xswimspa.com/swim-spas/trainer-series/" class="nav-link">H2X Swimspas</a></li>
 					<li class="nav-item"><a href="https://michaelphelpsswimspa.com/" class="nav-link">MP Swimspas</a></li>
-					<li class="nav-item"><a href="https://getawayhottubs.com/shop-hot-tubs" class="nav-link">Getaway spas </a></li>
-					
+					<li class="nav-item"><a href="https://getawayhottubs.com/shop-hot-tubs" class="nav-link">Getaway Spas</a></li>
 				</ul>
 			</div>
 		</div>
@@ -79,10 +82,10 @@
 
 	<!-- Hottub parallax effect -->
 	<div id="parallaxTitle" class="w-100">
-		<p class="display-1 text-center">#1 Selling <b style="text-shadow: 2px 2px 6px #333333;">Twilight </b></p>
+		<p id="tagLine" class="display-1 text-center">#1 Selling <b>Twilight</b></p>
 		<p class="text-center font-weight-bold">Masterspas Hottubs & Swimspas, Covana Covers, and more!</p>
 	</div>
-	<div id="parallax-container">
+	<div id="parallax-container" class="w-100">
 		<div class="d-none d-lg-block">
 			<img src="img/tub.png"/>
 			<img src="img/tub.png" class="float-right"/>
@@ -94,37 +97,36 @@
 	</div>
 
 	<!-- Page Content -->
-	<div id="content" class="container-fluid">
-
-		<div class="row">
-			<div class="col-sm-12 col-xl-6 offset-xl-1">
-				<div class="col-10 card p-4 mt-4">
-					<p class="lead text-center font-weight-bold">"Fraser Valley Hot Tubs is the <b>BEST</b> source for Masterspas Hottubs and Swimspas in the Fraser Valley!"</p>
+	<div id="content" class="container-fluid p-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 ml-auto">
+					<div class="card p-4 m-4">
+						<p class="lead text-center card-text">"Fraser Valley Hot Tubs is the <b>BEST</b> source for Masterspas Hottubs and Swimspas in the Fraser Valley!"</p>
+						<a class="btn btn-success p-3" href=https://www.masterspas.com/hot-tubs#all>Shop Models Now!</a>
+					</div>
 				</div>
-				<div class="col-10 m-5">
-			
-					<br>
-					<a class="btn-primary p-3" href=https://www.masterspas.com/hot-tubs#all>Shop Models Now!</a>
-				</div>
-			</div>
-			<div class="fb-col d-flex justify-content-center col-sm-12 col-xl-4">
-				<div class="fb-page" data-href="https://www.facebook.com/FraserValleyHotTubs" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-					<blockquote cite="https://www.facebook.com/FraserValleyHotTubs" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/FraserValleyHotTubs">Fraser Valley Hot Tubs</a></blockquote>
+				<div class="fb-col col-sm-12 col-md-6 mt-4 mt-md-0">
+					<div class="fb-page" data-href="https://www.facebook.com/FraserValleyHotTubs" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+						<blockquote cite="https://www.facebook.com/FraserValleyHotTubs" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/FraserValleyHotTubs">Fraser Valley Hot Tubs</a></blockquote>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="FAQ" class="row welcome text-center">
-			<div class="col-12 pt-3">
-				<h1 class="display-4">Troubleshooting/FAQ</h1>
-				<h3>Got questions? Don't worry we have at least a few answers.</h3>
-				<hr class="w-50">
+		<div class="container-fluid">
+			<div id="FAQ" class="row welcome text-center">
+				<div class="col-12 pt-3">
+					<h1 class="display-4">Troubleshooting/FAQ</h1>
+					<h3>Got questions? Don't worry we have at least a few answers.</h3>
+					<hr class="w-50">
+				</div>
 			</div>
 		</div>
 
 		<div class="container-fluid padding">
 			<div class="row">
-				<div class="d-flex justify-content-xl-right flex-column col-sm-12 col-xl-6">
+				<div class="d-flex justify-content-xl-right flex-column col-sm-12 col-md-6">
 					<button class="btn btn-primary m-3" type="button" data-toggle="collapse" data-target="#generalFAQ" aria-expanded="false">General FAQ</button>
 					<div class="collapse" id="generalFAQ">
 						<h4>Why should I consider a hot tub?</h4>
@@ -159,10 +161,10 @@
 
 						<h4>I’m actually more interested in exercising or swimming. Do you sell swim spas?</h4>
 						<p>Yes. Master Spas is actually the world’s largest swim spa manufacturer. For the ultimate swimming experience, see our premium performance line, Michael Phelps Signature Swim Spas by Master Spas. Or, if you are most interested in exercising, see our H2X Fitness Swim Spas.</p>
-						<hr class="w-90 pt-2">
+						<hr class="w-90 pt-2 d-none d-lg-block">
 					</div>
 				</div>
-				<div class="d-flex justify-content-xl-left flex-column col-sm-12 col-xl-6">
+				<div class="d-flex justify-content-xl-left flex-column col-sm-12 col-md-6">
 					<button class="btn btn-primary m-3" type="button" data-toggle="collapse" data-target="#technicalFAQ" aria-expanded="false">Technical FAQ</button>
 					<div class="collapse" id="technicalFAQ">
 						<h4>The water in my hot tub is cloudy</h4>
@@ -313,9 +315,11 @@
 					<div class="text-center">
 						<h4>(604)-618-4198</h4>
 						<h4>sean@fraservalleyhottubs.com</h4>
+						<h5>Viewing by appointment.</h5>
 						<hr class="w-75">
 						<a href="https://www.masterspas.com/hot-tubs#all" class="btn btn-primary btn-lg" style="margin:1.5rem auto;">View Models Online Now!</a>
-					<a href="https://www.hottubuniversity.com" class="btn btn-primary btn-lg" style="margin:1.5rem auto;">Hot Tub University !</a>
+						<a href="https://www.hottubuniversity.com" class="btn btn-primary btn-lg" style="margin:1.5rem auto;">Hot Tub University !</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -331,7 +335,6 @@
 				<div class="col-md-12">
 					<h5>Fraser Valley Hot Tubs &copy2019</h5>
 					<p class="lead">sean@fraservalleyhottubs.com</p>
-					
 				</div>
 			</div>
 		</div>
