@@ -1,6 +1,12 @@
-html, body{
+html{
 	height: 100%;
 	width: 100%;
+	/*overflow: auto;
+  -webkit-overflow-scrolling: touch;*/
+}
+body{
+	min-height: 100%;
+	overflow-x:hidden;
 }
 
 #pageVideo{
@@ -12,8 +18,6 @@ html, body{
   transform: translate(-50%, 0);
 }
 
-
-/* Todo Fix Parallax Container for mobile */
 #parallax-container {
   height: 100vh;
 }
@@ -21,27 +25,49 @@ html, body{
   position: fixed;
 	width: 100%;
 	z-index: -10;
-  top: 50%;
+  top: 60%;
 	transform: translateY(0px);
 }
-#parallax-container div:first-child {
-	top: 40%;
+#parallax-container img {
+	max-width: 50%;
+}
+#parallax-container div img:first-child {
+	transform: translateX(-5rem);
 }
 #parallax-container div img:last-child {
-	transform: scaleX(-1);
+	transform: scaleX(-1) translateX(-5rem);
 }
 
-#parallaxTitle{
+#parallaxTitle {
 	position: fixed;
   top: 25% !important;
 	z-index: -5 !important;
   background-color: #FFFFFFAA
+}
+#parallaxTitle b {
+	text-shadow: 2px 2px 6px #333333;
 }
 
 #content {
   z-index: 100;
   background-color: #dadada;
   position:relative;
+}
+
+#tagLine {
+	font-size: 3rem;
+}
+#parallaxTitle p:last-child {
+	font-size: 0.8rem;
+}
+#FAQ h1 {
+	font-size: 2rem;
+}
+#FAQ h3 {
+	font-size: 1.1rem;
+}
+#info > div {
+	font-size: 1.7rem;
 }
 
 footer {
@@ -64,8 +90,65 @@ footer {
 	width: 70%;
 }
 
+.fb-page{
+	display: flex!important;
+	align-items: center;
+	justify-content: center;
+}
 .fb-page,
 .fb-page span,
 .fb-page span iframe[style] {
-    width: 100% !important;
+    height: 700px !important;
 }
+
+/* XS Query */
+@media (max-width: 375px) {
+	#tagLine {
+		font-size: 2.3rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 0.7rem;
+	}
+	#info > div {
+		font-size: 1.4rem;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	#tagLine {
+		font-size: 4rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 1.1rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	#tagLine {
+		font-size: 5.3rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 1.4rem;
+	}
+	#info h4 {
+		font-size: 1.2rem;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	#tagLine {
+		font-size: 6.1rem;
+	}
+	#parallaxTitle p:last-child {
+		font-size: 1.7rem;
+	}
+	#info h4 {
+		font-size: 1.4rem;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
