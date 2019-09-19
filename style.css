@@ -27,14 +27,17 @@ body{
   position: fixed;
 	width: 100%;
 	z-index: -10;
-  top: 50%;
+  top: 60%;
 	transform: translateY(0px);
 }
-#parallax-container div:first-child {
-	top: 40%;
+#parallax-container img {
+	max-width: 50%;
+}
+#parallax-container div img:first-child {
+	transform: translateX(-5rem);
 }
 #parallax-container div img:last-child {
-	transform: scaleX(-1);
+	transform: scaleX(-1) translateX(-5rem);
 }
 
 #parallaxTitle {
