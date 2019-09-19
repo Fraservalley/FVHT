@@ -18,8 +18,6 @@ body{
   transform: translate(-50%, 0);
 }
 
-
-/* Todo Fix Parallax Container for mobile */
 #parallax-container {
   height: 100vh;
 }
@@ -56,6 +54,22 @@ body{
   position:relative;
 }
 
+#tagLine {
+	font-size: 3rem;
+}
+#parallaxTitle p:last-child {
+	font-size: 0.8rem;
+}
+#FAQ h1 {
+	font-size: 2rem;
+}
+#FAQ h3 {
+	font-size: 1.1rem;
+}
+#info > div {
+	font-size: 1.7rem;
+}
+
 footer {
 	background-color:#3f3f3f;
 	color:#d5d5d5;
@@ -76,7 +90,6 @@ footer {
 	width: 70%;
 }
 
-/* Fix FB Garbage */
 .fb-page{
 	display: flex!important;
 	align-items: center;
@@ -93,26 +106,11 @@ footer {
 	#tagLine {
 		font-size: 2.3rem;
 	}
+	#parallaxTitle p:last-child {
+		font-size: 0.7rem;
+	}
 	#info > div {
 		font-size: 1.4rem;
-	}
-}
-
-@media (max-width: 575px) {
-	#tagLine {
-		font-size: 3rem;
-	}
-	#parallaxTitle p:last-child {
-		font-size: 0.8rem;
-	}
-	#FAQ h1 {
-		font-size: 2rem;
-	}
-	#FAQ h3 {
-		font-size: 1.1rem;
-	}
-	#info > div {
-		font-size: 1.7rem;
 	}
 }
 
